@@ -1,4 +1,4 @@
-To deploy:
+To run in current terminal:
 ```
 go run .
 ```

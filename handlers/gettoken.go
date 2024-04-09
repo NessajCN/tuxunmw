@@ -14,7 +14,7 @@ var JWT_SECRET []byte = []byte("m4+gHOSXrWtTkzzblR8fVupaJkeMaXKlrtpAGmwjTWw=")
 
 // Verify jwt token string. Return the payload username if verified.
 func verifyJWT(tokenString string) (string, error) {
-	jwtsecret := []byte(JWT_SECRET)
+	jwtsecret := JWT_SECRET
 	token, err := jwt.ParseWithClaims(tokenString, &usernameClaims{}, func(token *jwt.Token) (interface{}, error) {
 		// Don't forget to validate the alg is what you expect:
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
@@ -81,7 +81,7 @@ func GetToken(ctx *gin.Context) {
 		},
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	jwtsecret := []byte(JWT_SECRET)
+	jwtsecret := JWT_SECRET
 	tokenstring, err := token.SignedString(jwtsecret)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
