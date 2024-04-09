@@ -1,0 +1,46 @@
+apiurl: https://example.COm:3000/api/
+username: tuxun
+password: tuxun001
+
+devices: 
+  tj00e0: 
+    newid: 123854345667
+    sensors: 
+      tj00e0O201: asdfghjj
+      tj00e0H2S01: asdfghjjdf
+      tj00e0CO01: asdfghjj2234
+      tj00e0LEL01: asdfghjjhjhs
+      tj00e0O202: asdfghjj
+      tj00e0H2S02: asdfghjjdf
+      tj00e0CO02: asdfghjj2234
+      tj00e0LEL02: asdfghjjhjhs
+
+  tj00e1: 
+    newid: 123854345668
+    sensors: 
+      tj00e1O201: asdfghjj
+      tj00e1H2S01: asdfghjjdf
+      tj00e1CO01: asdfghjj2234
+      tj00e1LEL01: asdfghjjhjhs
+      tj00e1O203: asdfghjj
+      tj00e1H2S03: asdfghjjdf
+      tj00e1CO03: asdfghjj2234
+      tj00e1LEL03: asdfghjjhjhs
+
+
+  tj00e2: 
+    newid: 123854345670
+    sensors: 
+      tj00e2O201: asdfghjj
+      tj00e2H2S01: asdfghjjdf
+      tj00e2CO01: asdfghjj2234
+      tj00e2LEL01: asdfghjjhjhs
+
+  tj00e3: 
+    newid: 123854345671
+    sensors: 
+      tj00e3O201: asdfghjj
+      tj00e3H2S01: asdfghjjdf
+      tj00e3CO01: asdfghjj2234
+      tj00e3LEL01: asdfghjjhjhs
+
