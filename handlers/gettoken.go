@@ -10,7 +10,7 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 )
 
-var JWTSECRET []byte = []byte("m4+gHOSXrWtTkzzblR8fVupaJkeMaXKlrtpAGmwjTWw=")
+const JWTSECRET string = "m4+gHOSXrWtTkzzblR8fVupaJkeMaXKlrtpAGmwjTWw="
 
 // Verify jwt token string. Return the payload username if verified.
 func verifyJWT(tokenString string) (string, error) {
@@ -21,7 +21,7 @@ func verifyJWT(tokenString string) (string, error) {
 		}
 
 		// hmacSampleSecret is a []byte containing your secret, e.g. []byte("my_secret_key")
-		return JWTSECRET, nil
+		return []byte(JWTSECRET), nil
 	})
 	if err != nil {
 		return "", err
@@ -80,7 +80,7 @@ func GetToken(ctx *gin.Context) {
 		},
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	tokenstring, err := token.SignedString(JWTSECRET)
+	tokenstring, err := token.SignedString([]byte(JWTSECRET))
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
 			"message": err.Error(),
